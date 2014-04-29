@@ -5,22 +5,14 @@ widgets:
     factory: tag
     props:
         tag: h2
-        text: i18n:heading_order_comment:Additional information
+        text: i18n:heading_purchase_order:Purchase Order
         class_add: expr:context.hidden_class
 - purchase_order:
     factory: "#field:text"
     value: context.get_value
     props:
         label: i18n:label_purchase_order:Purchase Order
-        display_proxy: True
-        class_add: expr:context.hidden_class
-    mode: expr:context.mode
-- comment:
-    factory: "#field:textarea"
-    value: context.get_value
-    props:
-        label: i18n:label_comment:Comment
-        rows: 8
+        rows: 1
         columns: 20
         display_proxy: True
         class_add: expr:context.hidden_class

@@ -20,9 +20,7 @@ from bda.plone.checkout.vocabularies import country_vocabulary
 from bda.plone.checkout.vocabularies import gender_vocabulary
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-import plone.api
 
-TERMS_AND_CONDITONS_ID = 'agb'
 
 class ProviderRegistry(object):
 
@@ -177,36 +175,10 @@ class ShippingSelection(FieldsProvider):
 
     @property
     def shipping_vocabulary(self):
-        vocab = list()
-        for sh in self.shippings.shippings:
-            if not sh.available:
-                continue
-            if sh.description:
-                label = translate(sh.label, context=self.request)
-                desc = translate(sh.description, context=self.request)
-                title = '%s (%s)' % (label, desc)
-            else:
-                title = translate(sh.label, context=self.request)
-            vocab.append((sh.sid, title))
-        return vocab
+        return self.shippings.vocab
 
     def get_shipping(self, widget, data):
-        default_shipping = self.shippings.default
-        request = self.request
-        from_request = request.get(widget.dottedpath)
-        from_cookie = request.cookies.get('shipping_method')
-        # got selection from request which differs from cookie, set cookie
-        if from_request and from_cookie != from_request:
-            request.response.setCookie(
-                'shipping_method', from_request, quoted=False, path='/')
-        # no shipping from request or cookie, return default
-        if not from_request and not from_cookie:
-            return self.shippings.default
-        # shipping from cookie, but not from request, return cookie
-        if from_cookie and not from_request:
-            return from_cookie
-        # return from request
-        return from_request
+        return self.request.get(widget.dottedpath, self.shippings.default)
 
 provider_registry.add(ShippingSelection)
 
@@ -252,9 +224,8 @@ class AcceptTermsAndConditions(FieldsProvider):
 
     @property
     def accept_label(self):
-        base = plone.api.portal.get_navigation_root(self.context).absolute_url()
         # XXX: url from config
-        tac_url = '%s/%s' % (base, TERMS_AND_CONDITONS_ID)
+        tac_url = '%s/agb' % self.context.absolute_url()
         tac_label = _('terms_and_conditions', 'Terms and conditions')
         tac_label = translate(tac_label, context=self.request)
         tac_link = '<a href="%s" class="terms_and_conditions">%s</a>'
