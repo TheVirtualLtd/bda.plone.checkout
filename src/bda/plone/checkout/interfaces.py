@@ -36,8 +36,24 @@ class IFieldsProvider(Interface):
     """
     fields_name = Attribute(u"Name of this fields provider.")
 
+    skip = Attribute(u"Flag whether to skip form extension")
+
     def extend(form):
         """Extend form with arbitrary fields.
+        """
+
+
+class ICheckoutSettings(Interface):
+    """Settings for checkout.
+    """
+
+    def skip_payment(uid):
+        """Return flag whether to skip payment for data stored under uid.
+        """
+
+    def skip_payment_redirect_url(uid):
+        """URL to redirect if payment should be skipped for data stored under
+        uid.
         """
 
 
@@ -46,11 +62,6 @@ class ICheckoutAdapter(Interface):
     """
     vessel = Attribute(u"``zope.interface.mapping.IWriteMapping providing`` "
                        u"instance.")
-
-    skip_payment = Attribute(u"Flag whether to skip payment.")
-
-    skip_payment_redirect_url = Attribute(u"URL to redirect if payment should"
-                                          u" be skipped.")
 
     def save(providers, widget, data):
         """Save fields specific data.

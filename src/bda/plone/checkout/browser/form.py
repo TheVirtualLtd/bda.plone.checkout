@@ -10,10 +10,12 @@ from yafowil.base import factory
 from yafowil.plone.form import Form
 from yafowil.yaml import parse_from_YAML
 from bda.plone.cart import readcookie
+from bda.plone.cart import get_data_provider
 from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout import message_factory as _
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import ICheckoutSettings
 from bda.plone.checkout.interfaces import ICheckoutFormPresets
 from bda.plone.checkout.interfaces import IFieldsProvider
 from bda.plone.checkout.vocabularies import country_vocabulary
@@ -59,6 +61,7 @@ class FieldsProvider(FormContext):
     fields_name = ''
     message_factory = _
     ignore_on_save = False
+    skip = False
 
     def __init__(self, context, request):
         self.context = context
@@ -86,6 +89,8 @@ class FieldsProvider(FormContext):
         return ret
 
     def extend(self, form):
+        if self.skip:
+            return
         fields = parse_from_YAML(self.fields_template,
                                  self, self.message_factory)
         form[self.fields_name] = fields
@@ -186,6 +191,11 @@ provider_registry.add(ShippingSelection)
 class PaymentSelection(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/payment_selection.yaml'
     fields_name = 'payment_selection'
+
+    @property
+    def skip(self):
+        cart_data = get_data_provider(self.context, self.request)
+        return not cart_data.total
 
     @property
     def payments(self):
@@ -321,9 +331,10 @@ class CheckoutForm(Form, FormContext):
             transaction.abort()
             self.checkout_back(self.request)
         checkout_adapter.clear_session()
-        if checkout_adapter.skip_payment:
+        checkout_settings = ICheckoutSettings(self.context)
+        if checkout_settings.skip_payment(uid):
             self.finish_redirect_url = \
-                checkout_adapter.skip_payment_redirect_url
+                checkout_settings.skip_payment_redirect_url(uid)
         else:
             p_name = data.fetch('checkout.payment_selection.payment').extracted
             payments = Payments(self.context)
