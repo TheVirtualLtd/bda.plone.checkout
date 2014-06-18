@@ -2,8 +2,15 @@
 Changelog
 =========
 
-0.4dev
-------
+0.5.dev0
+--------
+
+- No changes yet.
+  [rnix]
+
+
+0.4
+---
 
 - Always deliver shipping markup for cart overview. Displaying gets controlled
   by cart JS.
