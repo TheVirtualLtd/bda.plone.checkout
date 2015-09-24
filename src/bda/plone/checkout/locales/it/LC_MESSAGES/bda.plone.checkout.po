@@ -58,7 +58,7 @@ msgstr "Nome > campo obbligatorio"
 
 # Accept terms
 msgid "heading_accept_terms"
-msgstr ""
+msgstr "Termini e Condizioni"
 
 #. Default: "Billing Address"
 msgid "heading_billing_address"
@@ -95,7 +95,7 @@ msgstr "Indirizzo di spedizione"
 
 #. Default: "City"
 msgid "label_city"
-msgstr "Stato"
+msgstr "Città"
 
 #. Default: "Comment"
 msgid "label_comment"
@@ -107,15 +107,15 @@ msgstr "Ditta"
 
 #. Default: "Country"
 msgid "label_country"
-msgstr "Stato"
+msgstr "Paese"
 
 #. Default: "Email"
 msgid "label_email"
-msgstr "e-mail"
+msgstr "E-mail"
 
 #. Default: "First Name"
 msgid "label_firstname"
-msgstr "prenome"
+msgstr "Prenome"
 
 #. Default: "Gender"
 msgid "label_gender"
@@ -144,7 +144,7 @@ msgstr "Nome > campo obbligatorio"
 #. Default: "Male"
 #: ./vocabularies.py:11
 msgid "male"
-msgstr "Signor"
+msgstr "Signore"
 
 #. Default: "Next"
 #: ./browser/form.py:318
@@ -177,7 +177,7 @@ msgstr "termini e le condizioni"
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:272
 msgid "terms_and_conditions_text"
-msgstr "termini e le condizioni di testo"
+msgstr "Accetto i ${terms_and_conditions}"
 
 #. Default: "Yes"
 #: ./browser/form.py:166

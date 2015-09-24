@@ -1,190 +1,193 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2014-04-30 09:09+0000\n"
-"PO-Revision-Date: 2014-09-04 14:32+0100\n"
-"Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
-"Language-Team: Peter Holzer <peter.holzer@agitator.com>\n"
+"POT-Creation-Date: 2014-07-16 23:32+0000\n"
+"PO-Revision-Date: 2014-06-04 14:39 +1200\n"
+"Last-Translator: Robyn James <robyn@thevirtual.co.nz.>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: fr\n"
-"Language-Name: French\n"
+"Language-Code: en-gb\n"
+"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: bda.plone.checkout\n"
-"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
 #. Default: "Back"
-#: ./browser/form.py:312
+#: ./browser/form.py:288
 msgid "back"
-msgstr "Retour"
+msgstr "Back"
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
 msgid "checkout"
-msgstr "Caisse"
+msgstr "Checkout"
 
 # City is required
 msgid "city_is_required"
-msgstr "La localité est obligatoire"
+msgstr "City is required"
 
 # Country is required
 msgid "country_is_required"
-msgstr "Le pays est obligatoire"
+msgstr "Country is required"
 
 # Email is required
 msgid "email_is_required"
-msgstr "L'adresse E-mail est obligatoire"
+msgstr "Email is required"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:286
+#: ./browser/form.py:262
 msgid "error_accept_terms_and_conditiond"
-msgstr "S'il vous plaît accepter les termes et conditions"
+msgstr "Please indicate you accept our Terms & Conditions"
 
 #. Default: "Female"
-#: ./vocabularies.py:12
+#: ./vocabularies.py:13
 msgid "female"
-msgstr "Madame"
+msgstr "Female"
 
 #. Default: "Order now"
-#: ./browser/form.py:331
+#: ./browser/form.py:307
 msgid "finish"
-msgstr "Terminer"
+msgstr "Order Now"
 
 # First Name is required
 msgid "firstname_is_required"
-msgstr "Nom obligatoire"
+msgstr "First Name is required"
 
 # Accept terms
 msgid "heading_accept_terms"
-msgstr "Termes et conditions"
+msgstr "Accept Terms & Conditions"
 
 # Billing Address
 msgid "heading_billing_address"
-msgstr "Adresse de facturation"
+msgstr "Billing Address"
 
 #. Default: "Cart"
-#: ./browser/form.py:112
+#: ./browser/form.py:110
 msgid "heading_cart_summary"
-msgstr "Aperçu du panier"
+msgstr "Cart"
 
 # Delivery Address
 msgid "heading_delivery_address"
-msgstr "Adresse de livraison"
+msgstr "Delivery Address"
 
 # Additional information
 msgid "heading_order_comment"
-msgstr "Informations complémentaires"
+msgstr "Additional Information"
 
 # Payment Selection
 msgid "heading_payment_selection"
-msgstr "Mode de payement"
+msgstr "Payment Selection"
 
 # Personal Data
 msgid "heading_personal_data"
-msgstr "Données personnelles"
+msgstr "Customer Details"
 
 # Shipping
 msgid "heading_shipping_selection"
-msgstr "Expédition"
+msgstr "Shipping"
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
-msgstr "Différence entre adresse de livraison et facturation?"
+msgstr "Ship to alternate address"
 
 # City
 msgid "label_city"
-msgstr "Lieu"
+msgstr "City"
 
 # Comment
 msgid "label_comment"
-msgstr "Commentaire"
+msgstr "Comment"
 
 # Company
 msgid "label_company"
-msgstr "Entreprise"
+msgstr "Company"
 
 # Country
 msgid "label_country"
-msgstr "Pays"
+msgstr "Country"
 
 # Email
 msgid "label_email"
-msgstr "E-Mail"
+msgstr "Email"
 
 # First Name
 msgid "label_firstname"
-msgstr "Nom"
+msgstr "First Name"
 
 # Gender
 msgid "label_gender"
-msgstr "Titre"
+msgstr "Gender"
 
 # Last Name
 msgid "label_lastname"
-msgstr "Nom de famille"
+msgstr "Last Name"
 
 # Phone
 msgid "label_phone"
-msgstr "Téléphone"
+msgstr "Phone"
+
+# Region
+msgid "label_region"
+msgstr "County"
 
 # Street
 msgid "label_street"
-msgstr "Rue"
+msgstr "Street"
 
 # ZIP
 msgid "label_zip"
-msgstr "Code postal"
+msgstr "Post Code"
 
 # Last Name is required
 msgid "lastname_is_required"
-msgstr "Nom de famille obligatoire"
+msgstr "Last Name required"
 
 #. Default: "Male"
-#: ./vocabularies.py:11
+#: ./vocabularies.py:12
 msgid "male"
-msgstr "Monsieur"
+msgstr "Male"
 
 #. Default: "Next"
-#: ./browser/form.py:318
+#: ./browser/form.py:294
 msgid "next"
-msgstr "Suivant"
+msgstr "Next"
 
 #. Default: "No"
-#: ./browser/form.py:167
+#: ./browser/form.py:165
 msgid "no"
-msgstr "Non"
+msgstr "No"
 
 #. Default: "not set"
-#: ./browser/form.py:168
+#: ./browser/form.py:166
 msgid "not set"
-msgstr "Non défini"
+msgstr "Not Set"
 
 # Phone is required
 msgid "phone_is_required"
-msgstr "No. de téléphone obligatoire"
+msgstr "Phone is required"
 
 # Street is required
 msgid "street_is_required"
-msgstr "Rue obligatoire"
+msgstr "Street is required"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:226
+#: ./browser/form.py:244
 msgid "terms_and_conditions"
-msgstr "termes et conditions"
+msgstr "Terms & Conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:230
+#: ./browser/form.py:248
 msgid "terms_and_conditions_text"
-msgstr "J'ai lu et j'accepte les ${terms_and_conditions}"
+msgstr "I have read and accept the ${terms_and_conditions}"
 
 #. Default: "Yes"
-#: ./browser/form.py:166
+#: ./browser/form.py:164
 msgid "yes"
-msgstr "Oui"
+msgstr "Yes"
 
 # ZIP is required
 msgid "zip_is_required"
-msgstr "No. postal obligatoire"
+msgstr "Post Code is required"
 
