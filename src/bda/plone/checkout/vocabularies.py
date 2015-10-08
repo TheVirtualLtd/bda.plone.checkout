@@ -2,6 +2,7 @@ import pycountry
 from Products.CMFPlone.utils import safe_unicode
 from bda.plone.checkout import message_factory as _
 from zope.i18nmessageid import MessageFactory
+from plone import api
 
 
 _c = MessageFactory('iso3166')
@@ -13,24 +14,44 @@ def gender_vocabulary():
 
 
 AVAILABLE_COUNTRIES = [
-    (country.numeric, safe_unicode(_c(country.name))) \
-        for country in pycountry.countries
+    (country.numeric, safe_unicode(_c(country.name)))
+    for country in pycountry.countries
 ]
 # patch this list to modify available countries
-ENABLED_COUNTRIES = [
-    '040', # Austria
-    '756', # Switzerland
-    '276', # Germany
-    '380', # Italy
-]
+
+
+ENABLED_COUNTRIES = {
+    'ElectronzNZ': [
+        '554',  # New Zealand
+        ],
+    'GardeningSolutionzTM': [
+        '554',  # New Zealand
+        ],
+    'GirlGuidingNZ': [
+        '554',  # New Zealand
+        ],
+    'JKKKayaks': [
+        '554',  # New Zealand
+        ],
+    'default': [
+        '826',  # United Kingdom
+        '554',  # New Zealand
+        '040',  # Austria
+        '756',  # Switzerland
+        '276',  # Germany
+        '380',  # Italy
+        ],
+    }
 
 
 def country_vocabulary():
     """Vocabulary for countries from ISO3166 source.
     """
+    site_id = api.portal.get().getId()
+
     ret = list()
     for cid, name in AVAILABLE_COUNTRIES:
-        if cid in ENABLED_COUNTRIES:
+        if cid in ENABLED_COUNTRIES.get(site_id, ENABLED_COUNTRIES['default']):
             ret.append((cid, name))
     return ret
 
