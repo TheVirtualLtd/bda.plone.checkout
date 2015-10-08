@@ -22,9 +22,10 @@ from bda.plone.checkout.vocabularies import country_vocabulary
 from bda.plone.checkout.vocabularies import gender_vocabulary
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-import plone.api
+from plone import api
 
-TERMS_AND_CONDITONS_ID = 'agb'
+TERMS_AND_CONDITONS_ID = 'terms-and-conditions'
+
 
 class ProviderRegistry(object):
 
@@ -267,7 +268,7 @@ class AcceptTermsAndConditions(FieldsProvider):
 
     @property
     def accept_label(self):
-        base = plone.api.portal.get_navigation_root(self.context).absolute_url()
+        base = api.portal.get_navigation_root(self.context).absolute_url()
         # XXX: url from config
         tac_url = '%s/%s' % (base, TERMS_AND_CONDITONS_ID)
         tac_label = _('terms_and_conditions', 'Terms and conditions')
