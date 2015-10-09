@@ -24,7 +24,7 @@ from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
 from plone import api
 
-TERMS_AND_CONDITONS_ID = 'terms-and-conditions'
+TERMS_AND_CONDITONS_ID = 'agb'
 
 
 class ProviderRegistry(object):
