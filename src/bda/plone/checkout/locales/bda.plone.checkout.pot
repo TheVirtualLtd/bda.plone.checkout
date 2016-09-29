@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-04-30 09:09+0000\n"
+"POT-Creation-Date: 2016-09-22 06:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +14,13 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-
 #. Default: "Back"
-#: ./browser/form.py:312
+#: ./browser/form.py:325
 msgid "back"
+msgstr ""
+
+#: ./profiles.zcml:12
+msgid "bda.plone.checkout"
 msgstr ""
 
 #. Default: "Your Order"
@@ -38,17 +41,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:286
+#: ./browser/form.py:299
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
 #. Default: "Female"
-#: ./vocabularies.py:12
+#: ./vocabularies.py:13
 msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:331
+#: ./browser/form.py:344
 msgid "finish"
 msgstr ""
 
@@ -65,7 +68,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:112
+#: ./browser/form.py:113
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -142,22 +145,22 @@ msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Male"
-#: ./vocabularies.py:11
+#: ./vocabularies.py:12
 msgid "male"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:318
+#: ./browser/form.py:331
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:167
+#: ./browser/form.py:168
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:168
+#: ./browser/form.py:169
 msgid "not set"
 msgstr ""
 
@@ -170,21 +173,20 @@ msgid "street_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:268
+#: ./browser/form.py:281
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:272
+#: ./browser/form.py:285
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:166
+#: ./browser/form.py:167
 msgid "yes"
 msgstr ""
 
 # ZIP is required
 msgid "zip_is_required"
 msgstr ""
-

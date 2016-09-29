@@ -77,6 +77,18 @@
         <td class="cart_shipping">0.00</td>
         <td tal:content="currency" tal:condition="currency">EUR</td>
       </tr>
+      <tal:details condition="not:view/summary_total_only">
+      <tr class="display_surcharge" style="display: none;">
+        <td>
+          <span i18n:translate="surcharge_label">Surcharge:</span>
+          <span class="surcharge_description"></span>
+        </td>
+        <td class="surcharge">0.00</td>
+        <td tal:condition="currency">
+          <span tal:content="currency">EUR</span>
+        </td>
+      </tr>
+      </tal:details>
       <tr>
         <td><strong i18n:translate="summary_total">Total:</strong></td>
         <td><strong class="cart_total">Total</strong></td>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2014-07-16 23:32+0000\n"
+"POT-Creation-Date: 2016-09-22 06:03+0000\n"
 "PO-Revision-Date: 2014-06-04 14:39 +1200\n"
 "Last-Translator: Robyn James <robyn@thevirtual.co.nz.>\n"
 "Language-Team: \n"
@@ -15,9 +15,13 @@ msgstr ""
 "Domain: bda.plone.checkout\n"
 
 #. Default: "Back"
-#: ./browser/form.py:288
+#: ./browser/form.py:325
 msgid "back"
 msgstr "Back"
+
+#: ./profiles.zcml:12
+msgid "bda.plone.checkout"
+msgstr ""
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
@@ -37,7 +41,7 @@ msgid "email_is_required"
 msgstr "Email is required"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:262
+#: ./browser/form.py:299
 msgid "error_accept_terms_and_conditiond"
 msgstr "Please indicate you accept our Terms & Conditions"
 
@@ -47,7 +51,7 @@ msgid "female"
 msgstr "Female"
 
 #. Default: "Order now"
-#: ./browser/form.py:307
+#: ./browser/form.py:344
 msgid "finish"
 msgstr "Order Now"
 
@@ -64,7 +68,7 @@ msgid "heading_billing_address"
 msgstr "Billing Address"
 
 #. Default: "Cart"
-#: ./browser/form.py:110
+#: ./browser/form.py:113
 msgid "heading_cart_summary"
 msgstr "Cart"
 
@@ -128,10 +132,6 @@ msgstr "Last Name"
 msgid "label_phone"
 msgstr "Phone"
 
-# Region
-msgid "label_region"
-msgstr "County"
-
 # Street
 msgid "label_street"
 msgstr "Street"
@@ -150,17 +150,17 @@ msgid "male"
 msgstr "Male"
 
 #. Default: "Next"
-#: ./browser/form.py:294
+#: ./browser/form.py:331
 msgid "next"
 msgstr "Next"
 
 #. Default: "No"
-#: ./browser/form.py:165
+#: ./browser/form.py:168
 msgid "no"
 msgstr "No"
 
 #. Default: "not set"
-#: ./browser/form.py:166
+#: ./browser/form.py:169
 msgid "not set"
 msgstr "Not Set"
 
@@ -173,21 +173,20 @@ msgid "street_is_required"
 msgstr "Street is required"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:244
+#: ./browser/form.py:281
 msgid "terms_and_conditions"
 msgstr "Terms & Conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:248
+#: ./browser/form.py:285
 msgid "terms_and_conditions_text"
 msgstr "I have read and accept the ${terms_and_conditions}"
 
 #. Default: "Yes"
-#: ./browser/form.py:164
+#: ./browser/form.py:167
 msgid "yes"
 msgstr "Yes"
 
 # ZIP is required
 msgid "zip_is_required"
 msgstr "Post Code is required"
-

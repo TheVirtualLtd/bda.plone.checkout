@@ -240,6 +240,13 @@ class PaymentSelection(FieldsProvider):
         return self.payments.vocab
 
     def get_payment(self, widget, data):
+        request = self.request
+        from_request = request.get(widget.dottedpath)
+        from_cookie = request.cookies.get('payment_method')
+        # we set cookie for displaying surcharge in cart / checkout
+        if from_request and from_cookie != from_request:
+            request.response.setCookie(
+                'payment_method', from_request, quoted=False, path='/')
         return self.request.get(widget.dottedpath, self.payments.default)
 
 provider_registry.add(PaymentSelection)
