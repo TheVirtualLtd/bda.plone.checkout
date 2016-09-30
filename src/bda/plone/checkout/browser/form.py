@@ -22,7 +22,7 @@ from bda.plone.checkout.vocabularies import country_vocabulary
 from bda.plone.checkout.vocabularies import gender_vocabulary
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-import plone.api
+from plone import api
 
 TERMS_AND_CONDITONS_ID = 'agb'
 
@@ -202,6 +202,7 @@ class ShippingSelection(FieldsProvider):
         return vocab
 
     def get_shipping(self, widget, data):
+        default_shipping = self.shippings.default
         request = self.request
         from_request = request.get(widget.dottedpath)
         from_cookie = request.cookies.get('shipping_method')
@@ -239,6 +240,13 @@ class PaymentSelection(FieldsProvider):
         return self.payments.vocab
 
     def get_payment(self, widget, data):
+        request = self.request
+        from_request = request.get(widget.dottedpath)
+        from_cookie = request.cookies.get('payment_method')
+        # we set cookie for displaying surcharge in cart / checkout
+        if from_request and from_cookie != from_request:
+            request.response.setCookie(
+                'payment_method', from_request, quoted=False, path='/')
         return self.request.get(widget.dottedpath, self.payments.default)
 
 provider_registry.add(PaymentSelection)
@@ -267,8 +275,7 @@ class AcceptTermsAndConditions(FieldsProvider):
 
     @property
     def accept_label(self):
-        nav_root = plone.api.portal.get_navigation_root(self.context)
-        base = nav_root.absolute_url()
+        base = api.portal.get_navigation_root(self.context).absolute_url()
         # XXX: url from config
         tac_url = '%s/%s' % (base, TERMS_AND_CONDITONS_ID)
         tac_label = _('terms_and_conditions', 'Terms and conditions')
