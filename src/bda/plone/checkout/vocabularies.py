@@ -30,6 +30,9 @@ ENABLED_COUNTRIES = {
     'GirlGuidingNZ': [
         '554',  # New Zealand
         ],
+    'GuideBiscuits': [
+        '554',  # New Zealand
+        ],
     'JKKKayaks': [
         '554',  # New Zealand
         ],
