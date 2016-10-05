@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-09-22 06:03+0000\n"
+"POT-Creation-Date: 2016-10-05 02:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,12 @@ msgstr ""
 msgid "back"
 msgstr ""
 
-#: ./profiles.zcml:12
+#: ./profiles.zcml:14
 msgid "bda.plone.checkout"
+msgstr ""
+
+#: ./profiles.zcml:29
+msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"
@@ -51,7 +55,7 @@ msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:344
+#: ./browser/form.py:346
 msgid "finish"
 msgstr ""
 
@@ -150,7 +154,7 @@ msgid "male"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:331
+#: ./browser/form.py:332
 msgid "next"
 msgstr ""
 

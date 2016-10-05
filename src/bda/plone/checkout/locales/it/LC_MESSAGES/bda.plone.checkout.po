@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2016-09-22 06:03+0000\n"
+"POT-Creation-Date: 2016-10-05 02:30+0000\n"
 "PO-Revision-Date: 2013-07-08 14:55+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: \n"
@@ -20,8 +20,12 @@ msgstr ""
 msgid "back"
 msgstr "Indietro"
 
-#: ./profiles.zcml:12
+#: ./profiles.zcml:14
 msgid "bda.plone.checkout"
+msgstr ""
+
+#: ./profiles.zcml:29
+msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"
@@ -52,7 +56,7 @@ msgid "female"
 msgstr "Signora"
 
 #. Default: "Order now"
-#: ./browser/form.py:344
+#: ./browser/form.py:346
 msgid "finish"
 msgstr "Completare"
 
@@ -151,7 +155,7 @@ msgid "male"
 msgstr "Signore"
 
 #. Default: "Next"
-#: ./browser/form.py:331
+#: ./browser/form.py:332
 msgid "next"
 msgstr "Avanti"
 
