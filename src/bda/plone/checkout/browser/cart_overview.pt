@@ -84,9 +84,19 @@
       <tr class="display_surcharge" style="display: none;">
         <td>
           <span i18n:translate="surcharge_label">Surcharge:</span>
-          <span class="surcharge_description"></span>
+          <span class="surcharge_net_description"></span>
         </td>
-        <td class="surcharge">0.00</td>
+        <td class="surcharge_net">0.00</td>
+        <td tal:condition="currency">
+          <span tal:content="currency">EUR</span>
+        </td>
+      </tr>
+      <tr class="display_surcharge" style="display: none;">
+        <td>
+          <span i18n:translate="surcharge_vat_label">Surcharge VAT:</span>
+          <span class="surcharge_vat_description"></span>
+        </td>
+        <td class="surcharge_vat">0.00</td>
         <td tal:condition="currency">
           <span tal:content="currency">EUR</span>
         </td>
