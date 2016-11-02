@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2016-10-05 02:30+0000\n"
+"POT-Creation-Date: 2016-11-01 23:54+0000\n"
 "PO-Revision-Date: 2014-05-08 14:10+1200\n"
 "Last-Translator: Robyn James <robyn@thevirtual.co.nz.>\n"
 "Language-Team: \n"
@@ -37,13 +37,38 @@ msgstr "Checkout"
 msgid "city_is_required"
 msgstr "City is required"
 
+#. Default: "Comment"
+#: ./browser/cart_overview.pt:15
+msgid "comment"
+msgstr ""
+
 # Country is required
 msgid "country_is_required"
 msgstr "Country is required"
 
+#. Default: "Discount Net:"
+#: ./browser/cart_overview.pt:55
+msgid "discount_net"
+msgstr ""
+
+#. Default: "Discount Total:"
+#: ./browser/cart_overview.pt:66
+msgid "discount_total"
+msgstr ""
+
+#. Default: "Discount VAT.:"
+#: ./browser/cart_overview.pt:60
+msgid "discount_vat"
+msgstr "Discount GST:"
+
 # Email is required
 msgid "email_is_required"
 msgstr "Email is required"
+
+#. Default: "Cart is empty"
+#: ./browser/cart_overview.pt:36
+msgid "empty_cart"
+msgstr ""
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:299
@@ -97,7 +122,7 @@ msgstr "Customer Details"
 msgid "heading_shipping_selection"
 msgstr "Shipping"
 
-# Delivery address differs from shipping address?
+# Delivery address differs from billing address?
 msgid "label_alternative_delivery"
 msgstr "Ship to alternate address"
 
@@ -173,9 +198,44 @@ msgstr "Not Set"
 msgid "phone_is_required"
 msgstr "Phone is required"
 
+#. Default: "Price:"
+#: ./browser/cart_overview.pt:25
+msgid "price"
+msgstr ""
+
 # Street is required
 msgid "street_is_required"
 msgstr "Street is required"
+
+#. Default: "Net:"
+#: ./browser/cart_overview.pt:45
+msgid "summary_net"
+msgstr ""
+
+#. Default: "Shipping"
+#: ./browser/cart_overview.pt:75
+msgid "summary_shipping"
+msgstr ""
+
+#. Default: "Total:"
+#: ./browser/cart_overview.pt:106
+msgid "summary_total"
+msgstr ""
+
+#. Default: "VAT.:"
+#: ./browser/cart_overview.pt:50
+msgid "summary_vat"
+msgstr "GST:"
+
+#. Default: "Surcharge:"
+#: ./browser/cart_overview.pt:86
+msgid "surcharge_label"
+msgstr ""
+
+#. Default: "Surcharge VAT:"
+#: ./browser/cart_overview.pt:96
+msgid "surcharge_vat_label"
+msgstr "Surcharge GST"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:281

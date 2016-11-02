@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2016-10-05 02:30+0000\n"
+"POT-Creation-Date: 2016-11-01 23:54+0000\n"
 "PO-Revision-Date: 2015-01-28 15:13+0100\n"
 "Last-Translator: INTK <info@intk.com>\n"
 "Language-Team: \n"
@@ -38,13 +38,38 @@ msgstr "Uw bestelling"
 msgid "city_is_required"
 msgstr "Stad is vereist"
 
+#. Default: "Comment"
+#: ./browser/cart_overview.pt:15
+msgid "comment"
+msgstr ""
+
 # Country is required
 msgid "country_is_required"
 msgstr "Land is vereist"
 
+#. Default: "Discount Net:"
+#: ./browser/cart_overview.pt:55
+msgid "discount_net"
+msgstr ""
+
+#. Default: "Discount Total:"
+#: ./browser/cart_overview.pt:66
+msgid "discount_total"
+msgstr ""
+
+#. Default: "Discount VAT.:"
+#: ./browser/cart_overview.pt:60
+msgid "discount_vat"
+msgstr ""
+
 # Email is required
 msgid "email_is_required"
 msgstr "E-mail is vereist"
+
+#. Default: "Cart is empty"
+#: ./browser/cart_overview.pt:36
+msgid "empty_cart"
+msgstr ""
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:299
@@ -174,9 +199,44 @@ msgstr "Niet ingesteld"
 msgid "phone_is_required"
 msgstr "Telefoonnummer is vereist"
 
+#. Default: "Price:"
+#: ./browser/cart_overview.pt:25
+msgid "price"
+msgstr ""
+
 # Street is required
 msgid "street_is_required"
 msgstr "Straat is vereist"
+
+#. Default: "Net:"
+#: ./browser/cart_overview.pt:45
+msgid "summary_net"
+msgstr ""
+
+#. Default: "Shipping"
+#: ./browser/cart_overview.pt:75
+msgid "summary_shipping"
+msgstr ""
+
+#. Default: "Total:"
+#: ./browser/cart_overview.pt:106
+msgid "summary_total"
+msgstr ""
+
+#. Default: "VAT.:"
+#: ./browser/cart_overview.pt:50
+msgid "summary_vat"
+msgstr ""
+
+#. Default: "Surcharge:"
+#: ./browser/cart_overview.pt:86
+msgid "surcharge_label"
+msgstr ""
+
+#. Default: "Surcharge VAT:"
+#: ./browser/cart_overview.pt:96
+msgid "surcharge_vat_label"
+msgstr ""
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:281
