@@ -97,9 +97,9 @@ label.radioType input {
     padding:0;
     margin-top:0;
 }
-#form-checkout div.field.error .errormessage {
+/* #form-checkout div.field.error .errormessage {
     display:none;
-}
+} */
 #form-checkout div.field.error input,
 #form-checkout div.field.error input[type="text"],
 #form-checkout div.field.error input[type="email"] {
